@@ -1,13 +1,7 @@
 <h1>{{title}}</h1>
-<h2>My Menu</h2>
-<ul class="dishes">
-  <li *ngFor='let dish of dishes'
-  [class.selected]="dish === selectedDish"
-  (click)="onSelect(dish)">
-  <span class='badge'>{{dish.id}}</span>
-  {{dish.name}}
-  ></li>
-</ul>
-<dish-detail [dish]="selectedDish">
-	
-</dish-detail>
+<h2> My Menu</h2>
+<nav>
+<a routerLink = '/dashboard'>Dashboard</a>
+<a routerLink = '/dishes'>Dishes</a>
+</nav>
+<router-outlet></router-outlet>

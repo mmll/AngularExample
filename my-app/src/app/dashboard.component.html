@@ -1,0 +1,6 @@
+<h3>top dishes</h3>
+<div class='grid grid-pad'>
+	<div *ngFor = 'let dish of dishes' [routerLink]="['/detail',dish.id]" class='col-1-4'>
+		<h4>{{dish.name}}</h4>
+	</div>
+</div>

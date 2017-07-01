@@ -5,7 +5,12 @@ import { DISHES } from './mock-dishes';
 
 @Injectable()
 export class DishService{
-	getHeroes(): Dish[]{
-		return DISHES;
+	getDishes(): Promise<Dish[]>{
+		return Promise.resolve(DISHES);
+	}
+
+	getDish(id: number): Promise<Dish> {
+		return this.getDishes()
+			.then(dishes => dishes.find(dish => dish.id === id))
 	}
 }
