@@ -1,0 +1,16 @@
+<!-- < div >
+  < h2 > {{dish.name }} details! < /h2>
+  < div > <label>id: </label>{{dish.id}}</div>
+  <div>
+  <label>name: </label>
+  < input[(ngModel)]="dish.name" placeholder= "name" />
+  </div>
+  < /div> -->
+ <div *ngIf="dish">
+ 	<h2>{{dish.name}}</h2>
+ 	<div>
+ 		<label>id:</label>{{dish.id}}
+ 	</div>
+ 	<label>name:</label>
+ 	<input [(ngModel)]="dish.name"/>
+ </div>

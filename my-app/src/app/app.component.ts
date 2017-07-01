@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Dish } from './dish';
+import { DishDetailComponent } from './dish-detail.component';
+import { DishService } from './dish.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  selectedDish : Dish;
+
+  onSelect(dish: Dish): void{
+  	this.selectedDish = dish;
+  }
 }

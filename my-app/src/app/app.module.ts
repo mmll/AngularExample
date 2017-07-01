@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { DishDetailComponent } from './dish-detail.component'
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+	declarations: [
+		AppComponent,
+		DishDetailComponent
+	],
   imports: [
-    BrowserModule
+    BrowserModule,
+	FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
