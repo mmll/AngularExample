@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { DishesComponent } from './dish.component';
 import { DishDetailComponent } from './dish-detail.component'
+
 const routes: Routes = [
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 	{ path: 'dashboard', component: DashboardComponent },
