@@ -15,6 +15,7 @@ import { Dish } from './dish';
 @Component({
   selector: 'dish-search',
   templateUrl: './dish-search.component.html',
+  styleUrls: ['./dish-search.component.css'],
   providers: [DishSearchService]
 })
 export class DishSearchComponent implements OnInit {

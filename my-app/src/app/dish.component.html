@@ -8,10 +8,10 @@
   ></li>
 </ul>
 
-	<div *ngIf="selectedHero">
+	<div *ngIf="selectedDish">
   <h2>
-    {{selectedHero.name | uppercase}} is my hero
+    {{selectedDish.name | uppercase}} is my dish
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
-
+<dish-detail></dish-detail>

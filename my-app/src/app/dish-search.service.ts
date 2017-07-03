@@ -8,7 +8,10 @@ export class DishSearchService {
   constructor(private http: Http) {}
   search(term: string): Observable<Dish[]> {
     return this.http
-               .get('app/heroes/?name=${term}')
-               .map(response => response.json().data as Dish[]);
+               .get('app/dishes/?name='+term+'')
+               .map(function(response){
+				   return response.json().data as Dish[];
+               });
   }
 }
+response => response.json().data as Dish[]

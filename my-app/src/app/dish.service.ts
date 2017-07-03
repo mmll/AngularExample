@@ -17,14 +17,14 @@ export class DishService{
 		.catch(this.handleError);
 	}
 	getDish(id: number): Promise<Dish> {
-		const url = '${this.dishesUrl}/${id}'
+		const url = this.dishesUrl + '/'+id;
 		return this.http.get(url)
 			.toPromise()
 			.then(response => response.json().data as Dish)
 			.catch(this.handleError);
 	}
 	update(dish:Dish):Promise<Dish>{
-		const url = '${this.dishesUrl}/${dish.id}';
+		const url = this.dishesUrl + '/' + dish.id;
 		return this.http
 		.put(url,JSON.stringify(dish),{headers: this.headers})
 		.toPromise()
