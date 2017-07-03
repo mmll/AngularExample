@@ -10,7 +10,7 @@ import 'rxjs/add/operator/switchMap';
   templateUrl: './dish-detail.component.html'
 })
 export class DishDetailComponent implements OnInit{
-	@Input() dish: Dish;
+	dish: Dish;
 	constructor(
 		private dishService: DishService,
 		private route: ActivatedRoute,
@@ -18,12 +18,15 @@ export class DishDetailComponent implements OnInit{
 		){}
 	ngOnInit(): void {
 		this.route.params
-			.switchMap((params: Params) =>
-				this.dishService.getDish(+params['id']))
-			.subscribe(dish => this.dish = dish)
+      .switchMap((params: Params) => this.dishService.getDish(+params['id']))
+      .subscribe(dish => this.dish = dish);
 	}
 	goBack(): void{
 		this.location.back();
+	}
+	save(): void{
+		this.dishService.update(this.dish)
+		.then(() => this.goBack())
 	}
   	
 }

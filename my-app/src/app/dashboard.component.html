@@ -1,6 +1,9 @@
-<h3>top dishes</h3>
-<div class='grid grid-pad'>
-	<div *ngFor = 'let dish of dishes' [routerLink]="['/detail',dish.id]" class='col-1-4'>
-		<h4>{{dish.name}}</h4>
-	</div>
+<h3>Top Dishes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let dish of dishes"  [routerLink]="['/detail', dish.id]"  class="col-1-4">
+    <div class="module dish">
+      <h4>{{dish.name}}</h4>
+    </div>
+  </a>
 </div>
+<dish-search></dish-search>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from './dish';
-import { DishDetailComponent } from './dish-detail.component';
+//import { DishDetailComponent } from './dish-detail.component';
 import { DishService } from './dish.service';
 import { RouterModule, Router } from '@angular/router';
 
