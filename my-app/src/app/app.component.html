@@ -1,7 +1,8 @@
 <h1>{{title}}</h1>
 <h2> My Menu</h2>
-<nav>
-<a routerLink = '/dashboard'>Dashboard</a>
-<a routerLink = '/dishes'>Dishes</a>
-</nav>
+<nav md-tab-nav-bar>
+<a md-tab-link routerLink = '/dashboard'>Dashboard</a>
+<a md-tab-link routerLink = '/dishes'>Dishes</a>
+</nav> 
+
 <router-outlet></router-outlet>

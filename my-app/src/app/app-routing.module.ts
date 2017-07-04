@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { DishesComponent } from './dish.component';
-import { DishDetailComponent } from './dish-detail.component'
+import { DishDetailComponent } from './dish-detail.component';
+import { MdTabsModule,MaterialModule} from '@angular/material';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
 ];
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],
-	exports: [RouterModule]
+	exports: [RouterModule, MaterialModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+
+}

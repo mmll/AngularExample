@@ -15,6 +15,9 @@ import { DishSearchComponent } from './dish-search.component'
 
 import { AppRoutingModule } from './app-routing.module';
 import { DishService } from './dish.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -29,6 +32,7 @@ import { DishService } from './dish.service';
 	FormsModule,
 	AppRoutingModule,
 	HttpModule,
+	BrowserAnimationsModule,
 	AlertModule.forRoot(),
 	InMemoryWebApiModule.forRoot(InMemoryDataService)
 
